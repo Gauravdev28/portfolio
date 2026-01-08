@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" rx="20" fill="#0c0c0e"/>
+    <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700" font-size="50" fill="#f8fafc">
+        GA<tspan fill="#6366f1">.</tspan>
+    </text>
+</svg>

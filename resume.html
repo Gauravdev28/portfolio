@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Gaurav Agarwal</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --resume-bg: #0c0c0e;
+            --resume-text: #f8fafc;
+        }
+
+        body {
+            background: var(--resume-bg);
+            color: var(--resume-text);
+            padding: 4rem 2rem;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 2.5rem;
+        }
+
+        .resume-title h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .resume-title p {
+            color: var(--primary-color);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .resume-contact {
+            text-align: right;
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.75rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+        }
+
+        .contact-link:hover {
+            color: #fff;
+        }
+
+        .contact-link i {
+            color: var(--primary-color);
+            width: 18px;
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+        }
+
+        .resume-sidebar {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .resume-main {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .resume-section h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .resume-section h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--glass-border);
+        }
+
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .skill-category h3 {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            font-size: 0.8rem;
+        }
+
+        .experience-item,
+        .education-item {
+            margin-bottom: 2.5rem;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-header h3 {
+            font-size: 1.25rem;
+            color: #fff;
+        }
+
+        .item-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .item-company {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .item-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .item-desc ul {
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .item-desc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .actions {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 100;
+        }
+
+        .btn-fab {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: var(--transition-smooth);
+        }
+
+        .btn-fab:hover {
+            transform: scale(1.1);
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+                color: black;
+            }
+
+            .resume-container {
+                background: white;
+                color: black;
+                border: none;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            .actions,
+            .hero-overlay,
+            .profile-glow {
+                display: none !important;
+            }
+
+            .resume-title h1 {
+                background: none;
+                -webkit-text-fill-color: black;
+                color: black;
+            }
+
+            .resume-section h2,
+            .item-company,
+            .contact-link i {
+                color: #4f46e5 !important;
+            }
+
+            .skill-tag {
+                background: #f1f5f9;
+                border: 1px solid #e2e8f0;
+                color: black;
+            }
+
+            .resume-title p,
+            .item-date,
+            .resume-section h2::after {
+                color: #64748b !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 2rem;
+            }
+
+            .resume-header {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .resume-contact {
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            .contact-link {
+                justify-content: flex-start;
+            }
+
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <div class="resume-header" style="flex-wrap: wrap; gap: 2rem;">
+            <div class="resume-title" style="flex: 1;">
+                <h1>Gaurav Agarwal</h1>
+                <p>Creative Developer & Entrepreneur</p>
+            </div>
+            <div class="resume-contact">
+                <a href="mailto:gauravagldeveloper28@gmail.com" class="contact-link">
+                    <span>gauravagldeveloper28@gmail.com</span>
+                    <i data-lucide="mail"></i>
+                </a>
+                <a href="https://github.com/Gauravdev28" class="contact-link">
+                    <span>github.com/Gauravdev28</span>
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gauravdeveloper" class="contact-link">
+                    <span>linkedin.com/in/gauravvagl</span>
+                    <i data-lucide="linkedin"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="resume-grid">
+            <div class="resume-sidebar">
+                <div class="resume-section">
+                    <h2>Skills</h2>
+                    <div class="skill-list">
+                        <div class="skill-category">
+                            <h3>Development</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">C Language</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Javascript</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                            </div>
+                        </div>
+                                                <div class="skill-category">
+                            <h3>AI & Engineering</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">AI Prompt Engineering</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Design</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">UI/UX Design</span>
+                                <span class="skill-tag">Branding</span>
+                                <span class="skill-tag">Figma</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Business</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Entrepreneurship</span>
+                                <span class="skill-tag">Strategy</span>
+                                <span class="skill-tag">Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <div class="item-header">
+                            <h3>High School / College</h3>
+                        </div>
+                        <div class="item-company">Major / Field of Study</div>
+                        <div class="item-date">2025 — Present</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-main">
+                <div class="resume-section">
+                    <h2>Experience</h2>
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>Founder / Lead Developer</h3>
+                            <span class="item-date">2025 — Present</span>
+                        </div>
+                        <div class="item-company">CLEARSTIX</div>
+                        <div class="item-desc">
+                            <ul>
+                                <li>Spearheading the development of innovative digital products and brand identity
+                                    solutions.</li>
+                                <li>Developed a full-featured e-commerce platform with automated payment processing and
+                                    order tracking.</li>
+                                <li>Managed cross-functional projects from ideation to deployment, focusing on
+                                    user-centric design.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>Creative Developer</h3>
+                            <span class="item-date">2025</span>
+                        </div>
+                        <div class="item-company">Freelance / Independent Projects</div>
+                        <div class="item-desc">
+                            <ul>
+                                <li>Designed and developed high-performance portfolio websites for creative
+                                    professionals.</li>
+                                <li>Implemented complex animations and transitions using modern CSS and Javascript
+                                    frameworks.</li>
+                                <li>Collaborated with clients to build distinctive brand experiences and digital
+                                    strategies.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h2>Key Projects</h2>
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>FlowCode</h3>
+                        </div>
+                        <div class="item-desc">
+                            A transformative educational platform that bridges the gap between abstract C code and
+                            visual logic. It utilizes a custom parser to translate complex nested loops and conditional
+                            logic into sector-standard flowcharts, empowering students to master algorithmic thinking
+                            with ease.
+                            <br><a href="https://github.com/Gauravdev28/FlowCode" target="_blank"
+                                style="color: var(--primary-color); text-decoration: none; font-size: 0.85rem; display: inline-block; margin-top: 0.5rem;">View
+                                Repository →</a>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>CLEAR STIX</h3>
+                        </div>
+                        <div class="item-desc">
+                            An entrepreneurial venture specializing in premium sticker distribution. Managed full
+                            business operations including brand identity, inventory control, and hyper-local sales
+                            strategies within college and city markets.
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button onclick="window.print()" class="btn-fab" title="Print Resume">
+            <i data-lucide="printer"></i>
+        </button>
+        <button onclick="window.location.href='index.html'" class="btn-fab" title="Back to Home">
+            <i data-lucide="home"></i>
+        </button>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

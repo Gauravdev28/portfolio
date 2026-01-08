@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Agarwal | Creative Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    
+    <nav class="navbar">
+        <div class="container">
+            <a href="#hero" class="logo">
+                <img src="assets/favicon.svg" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Connect Me <i data-lucide="chevron-down" class="icon-inline"></i></a>
+                    <div class="dropdown-content glass-card">
+                        <a href="https://www.linkedin.com/in/gauravdeveloper" target="_blank"><i data-lucide="linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/Gauravdev28" target="_blank"><i data-lucide="github"></i> GitHub</a>
+                    </div>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section magazine-layout">
+        <div class="container fluid-container">
+            <!-- Magazine Header Elements -->
+            <div class="mag-header-left">
+                <span>Creative Developer</span>
+            </div>
+            <div class="mag-header-right">
+                <span>2025 Portfolio</span>
+            </div>
+
+            <!-- The Big Centerpiece -->
+            <div class="hero-visual">
+                <!-- Layer 1: Back Text -->
+                <h1 class="big-text back-text">GAURAV</h1>
+                
+                <!-- Layer 2: Image -->
+
+                
+                <!-- Layer 3: Front Text (Outline) -->
+                <h1 class="big-text front-text">GAURAV</h1>
+            </div>
+
+            <!-- Intro Content (Moved to bottom/overlay) -->
+            <div class="hero-content-mini">
+                <p class="hero-subtitle">Crafting Digital Excellence</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="resume.html" class="btn btn-text">Resume <i data-lucide="arrow-right" class="icon-inline"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-card glass-card">
+                <div class="about-image-container">
+
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">
+                        <span>Biography</span>The Vision Behind.
+                    </h2>
+                    <p>I specialize in building bridges between technical complexity and intuitive user experiences. 
+                       With a focus on performance and visual storytelling, I create applications that don't just work—they inspire.</p>
+                    <div class="stats-modern">
+                        <div class="stat-item">
+                            <h4>1+</h4>
+                            <p>Year Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>2</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title"><span>Expertise</span>Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-modern-card glass-card">
+                    <div class="skill-icon"><i data-lucide="code-2"></i></div>
+                    <h3>C Language</h3>
+                    <p>Building foundational logic and high-performance algorithms.</p>
+                </div>
+                <div class="skill-modern-card glass-card">
+                    <div class="skill-icon"><i data-lucide="terminal"></i></div>
+                    <h3>Python</h3>
+                    <p>Data processing, automation, and backend intelligence.</p>
+                </div>
+                <div class="skill-modern-card glass-card">
+                    <div class="skill-icon"><i data-lucide="zap"></i></div>
+                    <h3>Javascript</h3>
+                    <p>Creating interactive frontend experiences and dynamic logic.</p>
+                </div>
+                <div class="skill-modern-card glass-card">
+                    <div class="skill-icon"><i data-lucide="layout"></i></div>
+                    <h3>HTML</h3>
+                    <p>Structuring semantic and accessible web content.</p>
+                </div>
+                <div class="skill-modern-card glass-card">
+                    <div class="skill-icon"><i data-lucide="palette"></i></div>
+                    <h3>CSS</h3>
+                    <p>Designing beautiful, responsive, and animated interfaces.</p>
+                </div>
+                <div class="skill-modern-card glass-card">
+                    <div class="skill-icon"><i data-lucide="brain-circuit"></i></div>
+                    <h3>AI Prompt Engineering</h3>
+                    <p>Optimizing LLM interactions for advanced AI-driven solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title"><span>Portfolio</span>Selected Works</h2>
+            <div class="projects-grid">
+                <div class="project-card glass-card">
+                    <div class="icon-box" style="background: rgba(99, 102, 241, 0.1);">
+                        <i data-lucide="git-branch" color="#6366f1"></i>
+                    </div>
+                    <h3>FlowCode</h3>
+                    <p>Real-time C code parsing and flowchart generation platform built for developers.</p>
+                    <div class="project-tags">
+                        <span>C Parser</span>
+                        <span>SVG Logic</span>
+                        <span>D3.js</span>
+                    </div>
+                    <a href="https://github.com/Gauravdev28/FlowCode" target="_blank" class="btn btn-secondary" style="margin-left:0; margin-top:1rem;">Explore</a>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="icon-box" style="background: rgba(244, 63, 94, 0.1);">
+                        <i data-lucide="shopping-bag" color="#f43f5e"></i>
+                    </div>
+                    <h3>CLEAR STIX</h3>
+                    <p>Hyper-local entrepreneurial venture focusing on sustainable brand identity.</p>
+                    <div class="project-tags">
+                        <span>E-commerce</span>
+                        <span>Branding</span>
+                        <span>Business Plan</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary" style="margin-left:0; margin-top:1rem;">Case Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-card glass-card">
+                <h2 class="section-title"><span>Inquiry</span>Let's Build Together</h2>
+                <p>Have an idea or a project in mind? Let's discuss how we can bring it to life.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Subject?" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell me about your vision" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 4rem 0; color: var(--text-muted);">
+            <p>&copy; 2025 Gaurav Agarwal. Built with Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

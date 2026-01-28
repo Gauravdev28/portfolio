@@ -40,6 +40,12 @@ body {
     justify-content: center;
 }
 
+@media (max-width: 800px) {
+    .fluid-container {
+        padding: 0 1.5rem;
+    }
+}
+
 /* Navbar */
 .navbar {
     position: fixed;
@@ -104,7 +110,8 @@ body {
     background: var(--bg-dark);
 }
 
-.mag-header-left, .mag-header-right {
+.mag-header-left,
+.mag-header-right {
     position: absolute;
     top: 120px;
     font-size: 0.9rem;
@@ -113,8 +120,13 @@ body {
     letter-spacing: 2px;
 }
 
-.mag-header-left { left: 4rem; }
-.mag-header-right { right: 4rem; }
+.mag-header-left {
+    left: 4rem;
+}
+
+.mag-header-right {
+    right: 4rem;
+}
 
 /* The Sandwich Effect */
 .hero-visual {
@@ -128,13 +140,15 @@ body {
 
 .big-text {
     font-family: 'Inter', sans-serif;
-    font-size: 16vw; /* Massive responsive font */
+    font-size: 16vw;
+    /* Massive responsive font */
     font-weight: 800;
     line-height: 1;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -60%); /* Slight upward adjust */
+    transform: translate(-50%, -60%);
+    /* Slight upward adjust */
     white-space: nowrap;
     z-index: 1;
     margin: 0;
@@ -143,7 +157,8 @@ body {
 }
 
 .back-text {
-    color: #F2E8DC; /* Warm beige like reference */
+    color: #F2E8DC;
+    /* Warm beige like reference */
     z-index: 1;
 }
 
@@ -152,7 +167,7 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 90%; 
+    height: 90%;
     z-index: 2;
     display: flex;
     align-items: flex-end;
@@ -348,7 +363,8 @@ section {
     text-align: left;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 1.2rem;
     background: rgba(255, 255, 255, 0.03);
@@ -359,7 +375,8 @@ section {
     transition: var(--transition-smooth);
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     border-color: var(--primary-color);
     background: rgba(255, 255, 255, 0.06);
     outline: none;
@@ -510,8 +527,15 @@ section {
 }
 
 @keyframes slideDown {
-    from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
-    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 /* Dropdown Menu Fixed */
@@ -533,7 +557,7 @@ section {
     border: 1px solid var(--glass-border);
     background: rgba(12, 12, 14, 0.98);
     backdrop-filter: blur(20px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* Bridging gap between link and dropdown */
@@ -571,8 +595,15 @@ section {
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translateX(-50%) translateY(10px); }
-    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 /* Dropdown Button Alignment */
@@ -650,9 +681,9 @@ section {
         min-width: unset;
         background: rgba(12, 12, 14, 0.98);
         border: 1px solid var(--primary-color);
-        box-shadow: 0 -10px 40px rgba(0,0,0,0.8);
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
     }
-    
+
     .dropdown:hover .dropdown-content {
         animation: slideUpMobile 0.4s ease forwards;
     }
@@ -666,13 +697,14 @@ section {
     }
 
     .big-text {
-        font-size: 24vw;
+        font-size: 14vw;
         position: relative;
         top: auto;
         left: auto;
         transform: none;
-        margin: 2rem 0;
+        margin: 1rem 0;
         display: block;
+        text-align: center;
     }
 
     .hero-visual {
@@ -695,7 +727,15 @@ section {
     /* Bio Section */
     .about-card {
         flex-direction: column;
-        padding: 2rem 1.5rem;
+        padding: 2.5rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .about-image-container {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .stats-modern {
@@ -717,8 +757,15 @@ section {
 }
 
 @keyframes slideUpMobile {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -727,32 +774,32 @@ section {
     .navbar .container {
         padding: 0 1rem;
     }
-    
+
     .nav-links {
         gap: 0.5rem 0.8rem !important;
     }
-    
+
     .nav-links a {
         font-size: 0.75rem !important;
     }
-    
+
     .big-text {
-        font-size: 28vw !important;
-        margin: 1rem 0 !important;
+        font-size: 16vw !important;
+        margin: 0.5rem 0 !important;
     }
-    
+
     .section-title {
         font-size: 1.8rem !important;
     }
-    
+
     .about-card {
         padding: 1.5rem !important;
     }
-    
+
     .skills-grid {
         gap: 1rem !important;
     }
-    
+
     .skill-modern-card {
         padding: 2rem 1.5rem !important;
     }
@@ -761,7 +808,7 @@ section {
     .dropdown {
         position: static !important;
     }
-    
+
     .dropdown-content {
         left: 5% !important;
         right: 5% !important;
@@ -779,7 +826,7 @@ section {
         align-items: center;
         text-align: center;
     }
-    
+
     .logo {
         margin-bottom: 0.5rem;
     }
@@ -803,7 +850,7 @@ section {
 
     .dropdown-content {
         background: rgba(255, 255, 255, 0.98);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
     .dropdown-content a:hover {
@@ -813,27 +860,30 @@ section {
     .big-text.front-text {
         -webkit-text-stroke: 1px var(--text-main);
     }
-    
-    .social-card, .glass-card {
+
+    .social-card,
+    .glass-card {
         background: rgba(255, 255, 255, 0.7);
         border: 1px solid rgba(0, 0, 0, 0.08);
     }
-    
+
     .skill-icon {
         background: rgba(99, 102, 241, 0.08);
     }
-    
+
     .stat-item h4 {
         color: var(--primary-color);
     }
-    
-    .contact-form input, .contact-form textarea {
+
+    .contact-form input,
+    .contact-form textarea {
         background: rgba(0, 0, 0, 0.02);
         color: var(--text-main);
         border: 1px solid rgba(0, 0, 0, 0.08);
     }
-    
-    .contact-form input:focus, .contact-form textarea:focus {
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
         border-color: var(--primary-color);
         background: white;
     }
@@ -841,5 +891,83 @@ section {
     .btn-secondary {
         border-color: rgba(0, 0, 0, 0.15);
         color: var(--text-main);
+    }
+}
+
+/* Experience / Leadership Section Styles */
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 4rem auto 0;
+}
+
+.experience-card {
+    padding: 3rem;
+    position: relative;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.exp-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.exp-info .company {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.exp-date {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border: 1px solid var(--glass-border);
+}
+
+.exp-points {
+    list-style: none;
+    display: grid;
+    gap: 1.2rem;
+}
+
+.exp-points li {
+    position: relative;
+    padding-left: 2rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.exp-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    width: 12px;
+    height: 1px;
+    background: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+    .experience-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .exp-info h3 {
+        font-size: 1.5rem;
     }
 }

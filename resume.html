@@ -21,6 +21,7 @@
             background: var(--resume-bg);
             color: var(--resume-text);
             padding: 4rem 2rem;
+            overflow-x: hidden;
         }
 
         .resume-container {
@@ -50,6 +51,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            line-height: 1.1;
         }
 
         .resume-title p {
@@ -270,58 +272,89 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 2rem 1rem;
+            }
+
             .resume-container {
-                padding: 2rem;
+                padding: 2.5rem 1.5rem;
             }
 
             .resume-header {
                 flex-direction: column;
                 gap: 2rem;
+                text-align: center;
+            }
+
+            .resume-title h1 {
+                font-size: 2.5rem;
             }
 
             .resume-contact {
-                text-align: left;
-                align-items: flex-start;
+                text-align: center;
+                align-items: center;
+                width: 100%;
             }
 
             .contact-link {
-                justify-content: flex-start;
+                justify-content: center;
+                font-size: 0.85rem;
+                word-break: break-all;
             }
 
             .resume-grid {
                 grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .actions {
+                bottom: 1rem;
+                right: 1rem;
+                gap: 0.5rem;
+            }
+
+            .btn-fab {
+                width: 45px;
+                height: 45px;
             }
         }
-    
+
         @media (prefers-color-scheme: light) {
             :root {
                 --resume-bg: #f8fafc;
                 --resume-text: #0f172a;
                 --glass-border: rgba(0, 0, 0, 0.1);
             }
+
             .resume-container {
                 background: white;
-                box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
             }
+
             .resume-header {
                 border-bottom-color: rgba(0, 0, 0, 0.1);
             }
+
             .resume-title h1 {
                 background: linear-gradient(to right, #0f172a, #334155);
                 -webkit-background-clip: text;
                 background-clip: text;
             }
+
             .contact-link:hover {
                 color: var(--primary-color);
             }
+
             .resume-section h2 {
                 color: #0f172a;
                 border-bottom-color: rgba(0, 0, 0, 0.1);
             }
+
             .skill-tag {
                 background: rgba(99, 102, 241, 0.08);
                 color: var(--primary-color);
             }
+
             .experience-item {
                 border-left-color: rgba(0, 0, 0, 0.1);
             }
@@ -361,13 +394,15 @@
                             <h3>Development</h3>
                             <div class="skill-tags">
                                 <span class="skill-tag">C Language</span>
+                                <span class="skill-tag">C++ Programming</span>
+                                <span class="skill-tag">DSA</span>
                                 <span class="skill-tag">Python</span>
                                 <span class="skill-tag">Javascript</span>
                                 <span class="skill-tag">HTML</span>
                                 <span class="skill-tag">CSS</span>
                             </div>
                         </div>
-                                                <div class="skill-category">
+                        <div class="skill-category">
                             <h3>AI & Engineering</h3>
                             <div class="skill-tags">
                                 <span class="skill-tag">AI Prompt Engineering</span>
@@ -407,6 +442,24 @@
             <div class="resume-main">
                 <div class="resume-section">
                     <h2>Experience</h2>
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>Co-ordinator</h3>
+                            <span class="item-date">2025 — Present</span>
+                        </div>
+                        <div class="item-company">Pregrad Company (ITM University)</div>
+                        <div class="item-desc">
+                            <ul>
+                                <li>Spearheading student leadership initiatives and fostering a vibrant entrepreneurial
+                                    culture on campus.</li>
+                                <li>Acting as a liaison between students and industry mentors to organize impactful
+                                    workshops and events.</li>
+                                <li>Managed cross-functional teams to execute community-driven projects and university
+                                    outreach programs.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="experience-item">
                         <div class="item-header">
                             <h3>Founder / Lead Developer</h3>
@@ -470,8 +523,8 @@
                             strategies within college and city markets.
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
         </div>
